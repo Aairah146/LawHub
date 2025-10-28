@@ -52,7 +52,7 @@ Please provide a comprehensive answer with relevant legal sections, acts, or con
                 response = await fetch(`https://api-inference.huggingface.co/models/${model}`, {
                     method: 'POST',
                     headers: {
-                        'Authorization': `Bearer ${process.env.HUGGINGFACE_API_KEY || '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'}`,
+                        'Authorization': `Bearer ${process.env.HUGGINGFACE_API_KEY || process.env.HF_API_KEY}`,
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
